@@ -8,22 +8,22 @@
 
 import SwiftUI
 
+let scale: CGFloat = UIScreen.main.bounds.width / 375
+
 struct ContentView: View {
     
-    let scale: CGFloat = UIScreen.main.bounds.width / 375
-    
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: 12 * scale) {
             HStack {
                 Spacer()
                 Text("12345679088")
                     .foregroundColor(.primary)
-                    .font(.system(size: 76))
+                    .font(.system(size: 76 * scale))
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
-                    .padding(8)
+                    .padding(8 * scale)
             }
-            CalculatorButtonPad()
+            CalculatorButtonPad().padding(.bottom)
         }
         .frame(maxHeight: .infinity, alignment: .bottom)
     }
@@ -31,7 +31,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView().previewDevice("iPhone XR")
+            ContentView().previewDevice("iPhone SE")
+            ContentView().previewDevice("iPad Air 2")
+        }
     }
 }
 
@@ -47,11 +51,11 @@ struct CalculatorButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: fontSize))
+                .font(.system(size: fontSize * scale))
                 .foregroundColor(foregroundColor)
-                .frame(width: size.width, height: size.height)
+                .frame(width: size.width * scale, height: size.height * scale)
                 .background(Color(backgroundColorName))
-                .cornerRadius(size.width / 2)
+                .cornerRadius(size.width  * scale / 2)
         }
     }
 }
@@ -81,7 +85,7 @@ struct CalculatorButtonPad: View {
             .command(.clear), .command(.flip),
             .command(.percent), .op(.divide)
         ],[
-            .digit(7), .digit(8), .digit(9), .op(.multply)
+            .digit(7), .digit(8), .digit(9), .op(.multiply)
         ], [
             .digit(4), .digit(5), .digit(6), .op(.minus)
         ], [

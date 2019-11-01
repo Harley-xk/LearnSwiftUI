@@ -15,7 +15,7 @@ enum CalculatorButtonItem {
         case plus = "+"
         case minus = "-"
         case divide = "÷"
-        case multply = "×"
+        case multiply = "×"
         case equal = "="
     }
     
