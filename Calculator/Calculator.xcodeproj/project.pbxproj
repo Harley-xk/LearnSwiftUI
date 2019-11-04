@@ -15,6 +15,7 @@
 		C331010B236BF12700C96239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3310109236BF12700C96239 /* LaunchScreen.storyboard */; };
 		C3310113236BFEFA00C96239 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3310112236BFEFA00C96239 /* CalculatorButtonItem.swift */; };
 		C3310115236C0FFE00C96239 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3310114236C0FFE00C96239 /* CalculatorBrain.swift */; };
+		C3C4EB802370123E00BD9DC8 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4EB7F2370123E00BD9DC8 /* CalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C331010C236BF12700C96239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3310112236BFEFA00C96239 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		C3310114236C0FFE00C96239 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		C3C4EB7F2370123E00BD9DC8 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C3310102236BF12600C96239 /* ContentView.swift */,
 				C3310112236BFEFA00C96239 /* CalculatorButtonItem.swift */,
 				C3310114236C0FFE00C96239 /* CalculatorBrain.swift */,
+				C3C4EB7F2370123E00BD9DC8 /* CalculatorModel.swift */,
 				C3310104236BF12700C96239 /* Assets.xcassets */,
 				C3310109236BF12700C96239 /* LaunchScreen.storyboard */,
 				C331010C236BF12700C96239 /* Info.plist */,
@@ -155,6 +158,7 @@
 				C33100FF236BF12600C96239 /* AppDelegate.swift in Sources */,
 				C3310101236BF12600C96239 /* SceneDelegate.swift in Sources */,
 				C3310113236BFEFA00C96239 /* CalculatorButtonItem.swift in Sources */,
+				C3C4EB802370123E00BD9DC8 /* CalculatorModel.swift in Sources */,
 				C3310115236C0FFE00C96239 /* CalculatorBrain.swift in Sources */,
 				C3310103236BF12600C96239 /* ContentView.swift in Sources */,
 			);
