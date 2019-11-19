@@ -12,8 +12,22 @@ struct PokemonList: View {
     
     @State var expendingIndex: Int?
     
+    @State var searchingKeyword: String = ""
+    
     var body: some View {
         ScrollView {
+            
+            HStack {
+                Spacer()
+                Image(systemName: "magnifyingglass")
+                TextField("搜索", text: $searchingKeyword)
+            }.frame(height: 44)
+                .background(Color.white)
+            .cornerRadius(8)
+                .shadow(color: Color(hex: 0xCCCCCC), radius: 2)
+//                .border(Color(hex: 0xCCCCCC), width: 0.5)
+            .padding(.horizontal, 12)
+            
         ForEach(PokemonViewModel.all) { pokemon in
                 PokemonInfoRow(
                     model: pokemon,
